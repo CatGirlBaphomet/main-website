@@ -132,11 +132,11 @@ body::before {
 }
 
 .container {
-  width: 47%;
+  width: 55%;
   margin: 50px auto 0 auto;
   padding: 0 20px;
   display: grid;
-  grid-template-columns: 4fr 1fr;
+  grid-template-columns: 8fr 3fr;
   height: fit-content;
   border: none;
   border-radius: 10px;
@@ -213,21 +213,24 @@ nav {
 
 nav h2 {
   font-size: 1.2rem;
-  background: linear-gradient(to right, #8299bd, #4a586a, #181d23, #181d23);
+  background: linear-gradient(to right,  #8299bd, #8299bd, #4a586a, #181d23, #181d23);
   color: #000;
+padding-left: 15px;
 }
 
 nav a {
   display: block;
   text-decoration: none;
   color: #999;
-  width: 100%;
+  width: 90%;
+padding-left: 10px;
 }
 
 nav a:hover {
   text-decoration: none;
   background: linear-gradient(to right, #8299bd, #4a586a, #181d23, #181d23);
   color: #000;
+padding-left: 15px;
 }
 
 #cursor {
