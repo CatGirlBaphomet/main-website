@@ -1,1 +1,3 @@
-Sitemap: https://baph.dev/vile/sitemap.xml
+Sitemap: https://baph.dev/sitemap.xml
+User-agent: *
+ 
