@@ -272,20 +272,46 @@ nav a:hover::after {
 } 
 
 
+.main-content p {
+  margin: 0;
+  padding: 0;
+}
+.bottom-text-main{
+  margin-top: 35px;
+}
 
+.main-content h3 {
+  margin-top: 55px;
+}
 
+.closing-text {
+  margin-top: 15px;
+}
 
+body {
+  min-height: 100vh;
+}
+.skills img {
+  margin-bottom: 5px;
+}
 
+.skillcontainer h2 {
+  margin: 0px;
+  margin-top: 35px;
+}
 
+.links a {
+  color: #999;
+  text-decoration: none;
+}
 
+.links a:hover {
+  color: #484848;
+}
 
-
-
-
-
-
-
-
+.linkscontainer p {
+  margin-bottom: 20px;
+}
 
 
 
