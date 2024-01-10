@@ -312,9 +312,44 @@ body {
 .linkscontainer p {
   margin-bottom: 20px;
 }
+/* Styles for small screens (phones) */
+@media only screen and (max-width: 767px) {
+  .container {
+    grid-template-columns: 1fr; /* Change to a single column layout for smaller screens */
+  }
 
+  .main-content,
+  .sidebar {
+    width: 90%; /* Make both main-content and sidebar 90% of the screen width */
+    margin: 0 auto; /* Center the boxes by setting margin to auto */
+  }
 
+  .nav-container {
+    position: static; /* Remove fixed positioning */
+    width: 100%; /* Make the navigation container fill the entire screen width */
+    background-color: #222a32; /* Match the main content background color */
+    padding: 10px 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
 
+  .nav-container nav {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Ensure links wrap on smaller screens */
+  }
+
+  .nav-container nav a {
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 10px; /* Add margin between navigation links */
+  }
+
+  .nav-container nav a:hover {
+    color: #fff;
+    background-color: #000;
+  }
+}
 
 
 
