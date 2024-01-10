@@ -1,24 +1,29 @@
-// Select all navigation links
-var navLinks = document.querySelectorAll('.flex-container a');
+document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll('.sidebar nav a');
+    const sections = document.querySelectorAll('.main-content');
 
-// Select all sections
-var sections = document.querySelectorAll('.main-content');
+    links.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
 
-// Add a click event listener to each link
-navLinks.forEach(function(link) {
-    link.addEventListener('click', function(event) {
-        // Prevent the default action (jumping to the section immediately)
-        event.preventDefault();
+            const targetId = link.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
 
-        // Hide all sections
-        sections.forEach(function(section) {
-            section.style.display = 'none';
+            sections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(-50px)';
+                setTimeout(() => {
+                    section.style.display = 'none';
+                }, 300); // Delay display change after fade-out
+            });
+
+            setTimeout(() => {
+                targetSection.style.display = 'block';
+                setTimeout(() => {
+                    targetSection.style.opacity = '1';
+                    targetSection.style.transform = 'translateY(0)';
+                }, 10);
+            }, 500); // Delay new section display and fade-in after fade-out of the current section
         });
-
-        // Get the target section from the link's href attribute
-        var target = document.querySelector(this.getAttribute('href'));
-
-        // Show the target section
-        target.style.display = 'block';
     });
 });
