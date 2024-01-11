@@ -354,6 +354,34 @@ nav a:hover::after {
       width: 80%;
   }
 }
+
+
+.fadeOutIn {
+  animation: fadeOutIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeOutIn {
+  0% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+  100% {
+      opacity: 0;
+      transform: translateY(-100%);
+  }
+}
+.main-content {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform: translateY(-50px); /* Initial position above the screen */
+}
+
+#home {
+  display: block;
+  opacity: 1;
+  transform: translateY(0); /* Initial position at the top of the screen */
+}
 /* ==========================================================================
 Helper classes
 ========================================================================== */
