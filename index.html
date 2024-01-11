@@ -34,8 +34,8 @@
 
 <body>
     <div class="container">
-        <main>
-            <div class="main-content">
+        <main id="main-content">
+            <div class="main-content" id="home">
                 <h2>Home</h2>
                 <p>Hey there! Thanks a bunch for dropping by. I'm Berend, a Junior Software Developer with an insatiable
                     love for coding. Whether it's tackling a challenging problem or diving into the world of new
@@ -56,6 +56,44 @@
                     </div>
                 </div>
             </div>
+            <div class="main-content" id="skills">
+                <h2>Technical Skills</h2>
+                <p>Hey there! Here is a short list of my technical skills.</p>
+                <div class="skillcontainer">
+                    <div class="skills">
+                        <h2>Current Proficiency</h2>
+                        <img src="img/CSharp.png" alt="C#">
+                        <img src="img/HTML5.png" alt="HTML5">
+                        <img src="img/PYTHON.png" alt="PYTHON">
+                        <img src="img/PHP.png" alt="PHP">
+                        <img src="img/CSS3.png" alt="CSS3">
+                        <img src="img/NET.png" alt=".NET">
+                        <img src="img/NODE.png" alt="NODE.JS">
+                        <img src="img/MYSQL.png" alt="MYSQL">
+                        <img src="img/ARDUINO.png" alt="ARDUINO">
+                    </div>
+
+                    <h2>Some Knowledge</h2>
+                    <div class="some-knowlage">
+                        <img src="img/TYPESCRIPT.png" alt="TYPESCRIPT">
+                        <img src="img/JAVASCRIPT.png" alt="JAVASCRIPT">
+                        <img src="img/LARAVEL.png" alt="LARAVEL">
+                    </div>
+                    <h2>To Explore</h2>
+                    <div class="todo">
+                        <img src="img/CPP.png" alt="C++">
+                    </div>
+                </div>
+            </div>
+            <div class="main-content" id="links">
+                <h2>My Links</h2>
+                <p>Hey friend! Navigate through my digital world with these links. They're like secret passages to different parts of my online life. Explore my social spots, wander through GitHub, or drop me a line for a virtual chat. Let's keep these connections warm and welcoming.</p>
+                <p style="margin-top: 20px; margin-bottom: 20px;">Happy exploring,<br> Berend</p>
+                <div class="links">
+                    <a href="https://github.com/CatGirlBaphomet"><i class="fab fa-github fa-3x"></i></a>
+                    <a href="mailto:baph.dev@gmail.com"><i class="fas fa-envelope fa-3x"></i></a>
+                </div>
+            </div>
         </main>
         <header>
             <div class="sidebar">
@@ -63,19 +101,21 @@
                 <h1>Berend</h1>
                 <nav class="flex-container">
                     <h2>Directories <i class="fa-thin fa-folders"></i></h2>
-                    <a href="/">Home</a>
-                    <a href="skills">Skills</a>
-                    <a href="links">Links</a>
+                    <a href="#home">Home</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#links">Links</a>
                     <p class="terminal-icon">&gt;<span id="cursor"></span></p>
                 </nav>
             </div>
         </header>
     </div>
-        <script>
-            window.onload = function () {
-                document.getElementById('cursor').textContent = '_';
-            };
-        </script>
+
+    <script src="js/onepage.js"></script>
+    <script>
+        window.onload = function () {
+            document.getElementById('cursor').textContent = '_';
+        };
+    </script>
 </body>
 
 </html>
