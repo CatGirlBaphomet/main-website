@@ -146,6 +146,10 @@ body::before {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 4px 0 15px rgba(0, 0, 0, 0.5);
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform: translateY(-50px);
 }
 
 .sidebar {
@@ -293,6 +297,7 @@ nav a:hover::after {
 .links a {
   color: #999;
   text-decoration: none;
+  margin: 0.2em;
 }
 
 .links a:hover {
@@ -370,13 +375,6 @@ nav a:hover::after {
       transform: translateY(-100%);
   }
 }
-.main-content {
-  display: none;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-  transform: translateY(-50px);
-}
-
 #home {
   display: block;
   opacity: 1;
@@ -392,9 +390,6 @@ nav a:hover::after {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-}
-.links a {
-  margin: 0.2em;
 }
 
 /* ==========================================================================
