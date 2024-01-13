@@ -382,6 +382,19 @@ nav a:hover::after {
   opacity: 1;
   transform: translateY(0);
 }
+
+.icon {
+  width: 3em;
+  height: 3em; 
+  fill: currentColor; 
+}
+.links {
+  display: flex;
+  align-items: center;
+}
+.links a {
+  margin: 0.2em; /* Adjust this value as needed */
+}
 /* ==========================================================================
 Helper classes
 ========================================================================== */
