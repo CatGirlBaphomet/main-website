@@ -391,10 +391,12 @@ nav a:hover::after {
 .links {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 .links a {
-  margin: 0.2em; /* Adjust this value as needed */
+  margin: 0.2em;
 }
+
 /* ==========================================================================
 Helper classes
 ========================================================================== */
