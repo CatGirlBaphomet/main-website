@@ -102,10 +102,7 @@ img {
   font-family: 'CCRedAlert', sans-serif;
 }
 
-/* =======================================Defaults======================================= */
-
-
-
+/* =======================================Main======================================= */
 body {
   color: #999;
   background-image: url('../img/wallpaper.png');
@@ -114,7 +111,6 @@ body {
   background-size: cover;
   background-position: bottom;
 }
-
 body::before {
   content: "";
   position: fixed;
@@ -128,7 +124,6 @@ body::before {
   background-position: bottom;
   z-index: -1;
 }
-
 .container {
   width: 55%;
   margin: 50px auto 0 auto;
@@ -140,7 +135,6 @@ body::before {
   border-radius: 10px;
   grid-gap: 30px;
 }
-
 .main-content {
   background-color: #222a32;
   padding: 20px;
@@ -151,7 +145,6 @@ body::before {
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
   transform: translateY(-50px);
 }
-
 .sidebar {
   background-color: #181d23;
   height: 100%;
@@ -160,13 +153,11 @@ body::before {
   flex-direction: column;
   align-items: center;
 }
-
 .sidebar img {
   border: none;
   border-radius: 50%;
   margin-top: 50px;
 }
-
 .sidebar h1 {
   margin-bottom: 100px;
   font-size: 1.2rem;
@@ -176,7 +167,6 @@ body::before {
   text-align: center;
   border-radius: 10px;
 }
-
 .nav-container {
   align-self: flex-start;
   padding-left: 20px;
@@ -187,38 +177,29 @@ body::before {
   flex-direction: column;
   align-items: flex-start;
 }
-
 .nav-container nav a {
   text-decoration: none;
   margin-bottom: 20px;
   display: flex;
   align-items: center;
 }
-
 .nav-container nav a:hover {
   color: #fff;
   background-color: #000;
-
 }
-
 .nav-container nav a i {
   margin-right: 10px;
 }
-
-
 nav {
   display: block;
   width: 100%;
-
 }
-
 nav h2 {
   font-size: 1.2rem;
   background: linear-gradient(to right,  #8299bd, #8299bd, #4a586a, #181d23, #181d23);
   color: #000;
 padding-left: 15px;
 }
-
 nav a {
   display: block;
   text-decoration: none;
@@ -226,35 +207,28 @@ nav a {
   width: 90%;
 padding-left: 10px;
 }
-
 nav a:hover {
   text-decoration: none;
   background: linear-gradient(to right, #8299bd, #4a586a, #181d23, #181d23);
   color: #000;
 padding-left: 15px;
 }
-
 #cursor {
   animation: blink 1s infinite;
 }
-
 @keyframes blink {
-
   0%,
   49% {
     opacity: 1;
   }
-
   50%,
   100% {
     opacity: 0;
   }
 }
-
 .terminal-icon {
   font-size: 20px;
 }
-
 .flex-container {
   display: flex;
   flex-direction: column;
@@ -277,37 +251,30 @@ nav a:hover::after {
 .bottom-text-main{
   margin-top: 35px;
 }
-
 .main-content h3 {
   margin-top: 55px;
 }
-
 .closing-text {
   margin-top: 15px;
 }
 .skills img {
   margin-bottom: 5px;
 }
-
 .skillcontainer h2 {
   margin: 0px;
   margin-top: 35px;
 }
-
 .links a {
   color: #999;
   text-decoration: none;
   margin: 0.2em;
 }
-
 .links a:hover {
   color: #484848;
 }
-
 .linkscontainer p {
   margin-bottom: 20px;
 }
-
 @media only screen and (max-width: 767px) {
   .container {
     display: flex;
@@ -359,8 +326,6 @@ nav a:hover::after {
       width: 80%;
   }
 }
-
-
 .fadeOutIn {
   animation: fadeOutIn 0.5s ease-out forwards;
 }
@@ -380,7 +345,6 @@ nav a:hover::after {
   opacity: 1;
   transform: translateY(0);
 }
-
 .icon {
   width: 3em;
   height: 3em; 
@@ -391,7 +355,6 @@ nav a:hover::after {
   align-items: center;
   flex-wrap: wrap;
 }
-
 /* ==========================================================================
 Helper classes
 ========================================================================== */
