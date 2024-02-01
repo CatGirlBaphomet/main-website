@@ -161,7 +161,7 @@ body::before {
 .sidebar h1 {
   font-size: 1.2rem;
   padding: 0 5px 0 5px;
-  background: linear-gradient(to right, #a1c4fd, #c2e9fb, #a3a1ff);
+  background: linear-gradient(to right, #c2e9fb, #a1c4fd, #b7b6fa);
   color: #000;
   text-align: center;
   border-radius: 10px;
@@ -257,6 +257,12 @@ nav a:hover::after {
   margin-top: 15px;
 }
 .skills img {
+  margin-bottom: 5px;
+}
+.some-knowlage img {
+  margin-bottom: 5px;
+}
+.todo img {
   margin-bottom: 5px;
 }
 .skillcontainer h2 {
