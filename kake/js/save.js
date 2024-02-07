@@ -21,8 +21,8 @@ document.querySelector("#addItemForm").addEventListener("submit", function(event
     rootElem.appendChild(subitemsElem);
 
     var xmlStr = new XMLSerializer().serializeToString(xmlDoc);
-
-    fetch('/save_xml.php', {
+    
+    fetch('../kake/save_data.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
@@ -32,7 +32,7 @@ document.querySelector("#addItemForm").addEventListener("submit", function(event
     .then(response => response.text())
     .then(data => {
         console.log(data);
-        window.location.href = '/kake.html';
+        window.location.href = '../kake/index.php';
     })
     .catch((error) => {
         console.error('Error:', error);
