@@ -1,30 +1,19 @@
-document.querySelector("#addSubitem").addEventListener("click", function() {
-    var subitemsDiv = document.querySelector("#subitems");
-    var newSubitemNumber = subitemsDiv.getElementsByTagName("input").length + 1;
-    subitemsDiv.innerHTML += '<label for="subitem' + newSubitemNumber + '">Subitem:</label><br><input type="text" id="subitem' + newSubitemNumber + '" name="subitem' + newSubitemNumber + '"><br>';
-});
-
-document.querySelector("#addItemForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-
-    var title = document.querySelector("#title").value;
-    var subitems = Array.from(document.querySelector("#subitems").getElementsByTagName("input")).map(input => input.value);
-
-    var xmlDoc = document.implementation.createDocument("", "", null);
-    var rootElem = xmlDoc.createElement("item");
-    xmlDoc.appendChild(rootElem);
-
-    var titleElem = xmlDoc.createElement("title");
-    titleElem.appendChild(xmlDoc.createTextNode(title));
-    rootElem.appendChild(titleElem);
-
-    var subitemsElem = xmlDoc.createElement("subitems");
-    subitems.forEach(function(subitem) {
-        var subitemElem = xmlDoc.createElement("subitem");
-        subitemElem.appendChild(xmlDoc.createTextNode(subitem));
-        subitemsElem.appendChild(subitemElem);
-    });
-    rootElem.appendChild(subitemsElem);
-
-    console.log(new XMLSerializer().serializeToString(xmlDoc));
+document.getElementById('addSubitem').addEventListener('click', function() {
+    var subitems = document.getElementById('subitems');
+    var count = subitems.getElementsByTagName('input').length + 1;
+    if (count > 10) {
+        alert('You can only add up to 10 subitems.');
+        return;
+    }
+    var label = document.createElement('label');
+    label.setAttribute('for', 'subitem' + count);
+    label.textContent = 'Subitem ' + count + ':';
+    subitems.appendChild(label);
+    subitems.appendChild(document.createElement('br'));
+    var input = document.createElement('input');
+    input.type = 'text';
+    input.id = 'subitem' + count;
+    input.name = 'subitem' + count;
+    subitems.appendChild(input);
+    subitems.appendChild(document.createElement('br'));
 });

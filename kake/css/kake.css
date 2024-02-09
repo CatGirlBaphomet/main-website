@@ -12,10 +12,22 @@ a {
 a:hover {
     text-decoration: underline;
 }
-
 .container {
-    width: 80%;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px;
+  width: 100%; /* Set width to 100% */
+  max-width: 800px;
+  margin: 50px auto;
+}
+
+.item-container {
+  margin-bottom: 50px;
+}
+
+.item {
+  display: block; /* Make the item a flex container */
+  align-items: center; /* Center items vertically */
 }
 
 .header {
@@ -72,4 +84,42 @@ a:hover {
     display: block;
   }
 
+  .item {
+    margin-bottom: 10px;
+  }
   
+  .subitems {
+    display: none;
+    margin-left: 20px;
+  }
+  .item-title:hover {
+    text-decoration: underline;
+}
+.subitem {
+  display: flex;
+  align-items: center;
+}
+
+.subitem input[type="checkbox"] {
+  margin-right: 10px;
+}
+.item-title {
+  margin-bottom: 20px; /* Add a bottom margin */
+}
+
+.item-title:hover {
+  text-decoration: underline;
+}
+
+.subitem {
+  display: flex;
+  align-items: center;
+}
+
+.subitem input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.item-container.has-subitems .item-title::after {
+  content: " \25BC"; /* Unicode for down arrow */
+}
